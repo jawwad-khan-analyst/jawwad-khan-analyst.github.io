@@ -1,0 +1,10 @@
+# robots.txt — Jawwad Khan portfolio
+# TODO: replace jawwadkhan.dev with your production domain.
+
+User-agent: *
+Allow: /
+
+# Block nothing; the site is a single static page.
+# Keep the sitemap line pointing at your real domain.
+
+Sitemap: https://jawwadkhan.dev/sitemap.xml

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- ============================================================
+       JAWAD KHAN — DATA & FINANCIAL ANALYST PORTFOLIO
+       Built with semantic HTML5 + Tailwind CSS (CDN)
+       SEO-optimized for Google Search Console
+       ============================================================ -->
+
+  <!-- Basic meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>Jawwad Khan | Data &amp; Financial Analyst — Portfolio</title>
+  <meta name="description" content="Portfolio of Jawwad Khan, Data & Financial Analyst. Financial modeling, forecasting, data visualization and KPI reporting with Python, SQL, Power BI, Tableau and Excel. Explore projects, skills and experience.">
+  <meta name="keywords" content="Jawwad Khan, Data Analyst, Financial Analyst, Portfolio, Financial Modeling, Data Visualization, Power BI, Tableau, SQL, Python, Excel, KPI Reporting, Forecasting">
+  <meta name="author" content="Jawwad Khan">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Canonical — TODO: replace with your production domain once deployed -->
+  <link rel="canonical" href="https://jawwadkhan.dev/">
+
+  <!-- Theme color for browser chrome (dark/light aware) -->
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)">
+
+  <!-- Open Graph (Facebook / LinkedIn / WhatsApp) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jawwad Khan — Portfolio">
+  <meta property="og:title" content="Jawwad Khan | Data &amp; Financial Analyst">
+  <meta property="og:description" content="Financial modeling, forecasting, data visualization and KPI reporting with Python, SQL, Power BI, Tableau and Excel.">
+  <!-- TODO: create /og-image.png (1200x630) and replace the URL -->
+  <meta property="og:image" content="https://jawwadkhan.dev/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Jawwad Khan — Data & Financial Analyst portfolio preview">
+  <meta property="og:url" content="https://jawwadkhan.dev/">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jawwad Khan | Data &amp; Financial Analyst">
+  <meta name="twitter:description" content="Financial modeling, forecasting, data visualization and KPI reporting with Python, SQL, Power BI, Tableau and Excel.">
+  <meta name="twitter:image" content="https://jawwadkhan.dev/og-image.png">
+  <meta name="twitter:image:alt" content="Jawwad Khan — Data & Financial Analyst portfolio preview">
+
+  <!-- Favicon (inline SVG — no extra request) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%234f46e5'/%3E%3Cstop offset='1' stop-color='%230ea5e9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='32' font-weight='bold' fill='white' text-anchor='middle'%3EJK%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%234f46e5'/%3E%3Cstop offset='1' stop-color='%230ea5e9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='32' font-weight='bold' fill='white' text-anchor='middle'%3EJK%3C/text%3E%3C/svg%3E">
+
+  <!-- Performance: preconnect to external origins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+
+  <!-- Font: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Dark mode bootstrap (runs before paint to avoid flash of wrong theme) -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (stored === "dark" || (!stored && prefersDark)) {
+          document.documentElement.classList.add("dark");
+        }
+      } catch (e) { /* localStorage unavailable — default to light */ }
+    })();
+  </script>
+
+  <!-- Tailwind CSS (Play CDN) — NOTE: for production, compile Tailwind instead of the CDN.
+       Config MUST be set before the CDN script loads. -->
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"]
+          },
+          colors: {
+            brand: {
+              50:  "#eef2ff",
+              100: "#e0e7ff",
+              500: "#6366f1",
+              600: "#4f46e5",
+              700: "#4338ca",
+              800: "#3730a3"
+            },
+            accent: {
+              400: "#38bdf8",
+              500: "#0ea5e9",
+              600: "#0284c7"
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Structured data: JSON-LD (Schema.org) for rich results / E-E-A-T -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "name": "Jawwad Khan — Data & Financial Analyst",
+    "url": "https://jawwadkhan.dev/",
+    "dateModified": "2026-08-29",
+    "inLanguage": "en",
+    "mainEntity": {
+      "@type": "Person",
+      "@id": "https://jawwadkhan.dev/#person",
+      "name": "Jawwad Khan",
+      "alternateName": "Jawwad Khan Analyst",
+      "jobTitle": "Data & Financial Analyst",
+      "description": "Data & Financial Analyst specializing in financial modeling, forecasting, data visualization and KPI reporting using Python, SQL, Power BI, Tableau and Excel.",
+      "url": "https://jawwadkhan.dev/",
+      "email": "mailto:jawwadkhann69@gmail.com",
+      "image": "https://jawwadkhan.dev/og-image.png",
+      "sameAs": [
+        "https://github.com/jawwad-khan-analyst"
+      ],
+      "knowsAbout": [
+        "Financial Modeling", "Forecasting", "Data Visualization", "KPI Reporting",
+        "Python", "SQL", "Power BI", "Tableau", "Excel", "Statistics", "Budgeting",
+        "Variance Analysis", "Risk Analysis", "Machine Learning"
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Jawwad Khan — Data & Financial Analyst Portfolio",
+    "url": "https://jawwadkhan.dev/",
+    "description": "Portfolio of Jawwad Khan, Data & Financial Analyst.",
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Person",
+      "name": "Jawwad Khan",
+      "url": "https://jawwadkhan.dev/"
+    }
+  }
+  </script>
+
+  <!-- Inline styles: smooth scroll offset, selection, focus visibility -->
+  <style>
+    section[id] { scroll-margin-top: 5.5rem; }
+    ::selection { background-color: #6366f1; color: #ffffff; }
+    .dark ::selection { background-color: #818cf8; color: #0f172a; }
+    .gradient-text {
+      background-image: linear-gradient(90deg, #4f46e5, #0ea5e9);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .dark .gradient-text {
+      background-image: linear-gradient(90deg, #818cf8, #38bdf8);
+    }
+    :focus-visible {
+      outline: 3px solid #6366f1;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+    html { -webkit-tap-highlight-color: transparent; }
+  </style>
+</head>
+
+<body class="bg-white text-slate-700 dark:bg-slate-950 dark:text-slate-300 font-sans antialiased transition-colors duration-300">
+
+  <!-- Accessibility: skip link -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-indigo-600 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold">
+    Skip to main content
+  </a>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/80 dark:bg-slate-950/80 border-b border-slate-200 dark:border-slate-800">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 py-4" aria-label="Primary navigation">
+      <a href="#home" class="text-lg font-extrabold tracking-tight text-slate-900 dark:text-white">
+        Jawwad<span class="gradient-text">.Khan</span>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-7 text-sm font-medium">
+        <li><a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a></li>
+        <li><a href="#skills" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Skills</a></li>
+        <li><a href="#projects" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Projects</a></li>
+        <li><a href="#experience" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Experience</a></li>
+        <li><a href="#contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a></li>
+      </ul>
+
+      <div class="flex items-center gap-3">
+        <!-- Theme toggle -->
+        <button id="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false"
+                class="p-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          <!-- Sun (shown in dark mode) -->
+          <svg id="icon-sun" class="hidden w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1.5M12 19.5V21M4.22 4.22l1.06 1.06M18.72 18.72l1.06 1.06M3 12h1.5M19.5 12H21M4.22 19.78l1.06-1.06M18.72 5.28l1.06-1.06M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z"/>
+          </svg>
+          <!-- Moon (shown in light mode) -->
+          <svg id="icon-moon" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 15.75A8.25 8.25 0 018.25 2.25 8.25 8.25 0 1021.75 15.75z"/>
+          </svg>
+        </button>
+
+        <a href="mailto:jawwadkhann69@gmail.com"
+           class="hidden sm:inline-flex items-center gap-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-4 py-2 transition-colors">
+          Hire Me
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section id="home" aria-label="Introduction" class="relative overflow-hidden">
+      <!-- Decorative gradient blobs -->
+      <div aria-hidden="true" class="pointer-events-none absolute -top-24 -right-24 w-96 h-96 rounded-full bg-indigo-500/10 dark:bg-indigo-500/20 blur-3xl"></div>
+      <div aria-hidden="true" class="pointer-events-none absolute -bottom-32 -left-24 w-96 h-96 rounded-full bg-sky-500/10 dark:bg-sky-500/20 blur-3xl"></div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-32 relative">
+        <p class="text-sm font-semibold tracking-widest uppercase text-indigo-600 dark:text-indigo-400 mb-4">
+          Data &amp; Financial Analyst
+        </p>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+          Hi, I'm <span class="gradient-text">Jawwad Khan</span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg md:text-xl text-slate-600 dark:text-slate-400">
+          I turn raw data into clear financial stories — building forecasts, models and dashboards that help businesses make confident, data-driven decisions.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a href="#projects" class="rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 transition-colors">
+            View Projects
+          </a>
+          <a href="mailto:jawwadkhann69@gmail.com" class="rounded-lg border border-slate-300 dark:border-slate-700 hover:border-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold px-6 py-3 transition-colors">
+            Let's Connect
+          </a>
+        </div>
+
+        <!-- Quick stats -->
+        <dl class="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl">
+          <div>
+            <dt class="sr-only">Years of experience</dt>
+            <dd class="text-3xl font-extrabold text-slate-900 dark:text-white">6+</dd>
+            <dd class="text-sm text-slate-500 dark:text-slate-400 mt-1">Years in analysis</dd>
+          </div>
+          <div>
+            <dt class="sr-only">Dashboards delivered</dt>
+            <dd class="text-3xl font-extrabold text-slate-900 dark:text-white">40+</dd>
+            <dd class="text-sm text-slate-500 dark:text-slate-400 mt-1">Dashboards delivered</dd>
+          </div>
+          <div>
+            <dt class="sr-only">Forecast accuracy</dt>
+            <dd class="text-3xl font-extrabold text-slate-900 dark:text-white">94%</dd>
+            <dd class="text-sm text-slate-500 dark:text-slate-400 mt-1">Forecast accuracy</dd>
+          </div>
+          <div>
+            <dt class="sr-only">Industries served</dt>
+            <dd class="text-3xl font-extrabold text-slate-900 dark:text-white">12+</dd>
+            <dd class="text-sm text-slate-500 dark:text-slate-400 mt-1">Industries served</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" aria-label="About Jawwad Khan" class="border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/40">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-24">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">About Me</h2>
+        <p class="mt-3 text-indigo-600 dark:text-indigo-400 font-semibold text-sm uppercase tracking-widest">Who I am &amp; what I do</p>
+
+        <div class="mt-8 grid md:grid-cols-5 gap-10">
+          <div class="md:col-span-3 space-y-5 text-base md:text-lg leading-relaxed">
+            <p>
+              I'm a <strong class="text-slate-900 dark:text-white">Data &amp; Financial Analyst</strong> with 6+ years of experience helping
+              organizations move from guesswork to evidence-based planning. My work sits at the intersection of
+              finance and data science: I model revenue and costs, build forecasts, and design dashboards that
+              executives actually use every day.
+            </p>
+            <p>
+              My toolkit spans <strong class="text-slate-900 dark:text-white">Python, SQL, Power BI, Tableau and Excel</strong> —
+              chosen pragmatically per problem, never for show. I care about clean, explainable analysis that
+              stands up to scrutiny and drives measurable outcomes, from cost savings to faster monthly closes.
+            </p>
+            <p>
+              Beyond the numbers, I enjoy translating complex findings into simple visuals and stories that
+              stakeholders at every level can act on.
+            </p>
+          </div>
+
+          <aside class="md:col-span-2 space-y-4" aria-label="Focus areas">
+            <h3 class="text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">Focus areas</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3 bg-white dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 p-4">
+                <svg class="w-5 h-5 text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                <span><strong class="text-slate-900 dark:text-white">Financial Modeling</strong><br>3-statement models, valuation, scenario analysis</span>
+              </li>
+              <li class="flex items-start gap-3 bg-white dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 p-4">
+                <svg class="w-5 h-5 text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3v18h18M7 16l4-4 4 4 4-4"/></svg>
+                <span><strong class="text-slate-900 dark:text-white">Forecasting &amp; Analytics</strong><br>Time-series forecasting, variance analysis, KPIs</span>
+              </li>
+              <li class="flex items-start gap-3 bg-white dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 p-4">
+                <svg class="w-5 h-5 text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 13v-1m4 1v-3m4 3V8M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/></svg>
+                <span><strong class="text-slate-900 dark:text-white">Data Visualization</strong><br>Interactive dashboards in Power BI &amp; Tableau</span>
+              </li>
+              <li class="flex items-start gap-3 bg-white dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 p-4">
+                <svg class="w-5 h-5 text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                <span><strong class="text-slate-900 dark:text-white">Reporting Automation</strong><br>SQL &amp; Python pipelines that save hours weekly</span>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills" aria-label="Skills and tools" class="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-24">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Skills &amp; Tools</h2>
+      <p class="mt-3 text-indigo-600 dark:text-indigo-400 font-semibold text-sm uppercase tracking-widest">What I work with</p>
+
+      <div class="mt-10 grid md:grid-cols-2 gap-6">
+        <!-- Data analysis -->
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <svg class="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3v18h18"/><path stroke-linecap="round" stroke-linejoin="round" d="M7 15l4-4 3 3 5-6"/></svg>
+            Data Analysis
+          </h3>
+          <ul class="mt-4 flex flex-wrap gap-2" aria-label="Data analysis skills">
+            <li class="px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-300 text-sm font-medium">Python (Pandas, NumPy)</li>
+            <li class="px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-300 text-sm font-medium">SQL (PostgreSQL, MySQL)</li>
+            <li class="px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-300 text-sm font-medium">Statistics &amp; A/B Testing</li>
+            <li class="px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-300 text-sm font-medium">Machine Learning (scikit-learn)</li>
+            <li class="px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-300 text-sm font-medium">ETL &amp; Data Cleaning</li>
+          </ul>
+        </article>
+
+        <!-- Financial analysis -->
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <svg class="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Financial Analysis
+          </h3>
+          <ul class="mt-4 flex flex-wrap gap-2" aria-label="Financial analysis skills">
+            <li class="px-3 py-1.5 rounded-full bg-sky-50 text-sky-700 dark:bg-sky-500/10 dark:text-sky-300 text-sm font-medium">Financial Modeling</li>
+            <li class="px-3 py-1.5 rounded-full bg-sky-50 text-sky-700 dark:bg-sky-500/10 dark:text-sky-300 text-sm font-medium">Forecasting &amp; Budgeting</li>
+            <li class="px-3 py-1.5 rounded-full bg-sky-50 text-sky-700 dark:bg-sky-500/10 dark:text-sky-300 text-sm font-medium">Variance &amp; Ratio Analysis</li>
+            <li class="px-3 py-1.5 rounded-full bg-sky-50 text-sky-700 dark:bg-sky-500/10 dark:text-sky-300 text-sm font-medium">Valuation (DCF, Comps)</li>
+            <li class="px-3 py-1.5 rounded-full bg-sky-50 text-sky-700 dark:bg-sky-500/10 dark:text-sky-300 text-sm font-medium">KPI &amp; Board Reporting</li>
+          </ul>
+        </article>
+
+        <!-- Visualization & tools -->
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 md:col-span-2">
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <svg class="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            Visualization &amp; Tools
+          </h3>
+          <ul class="mt-4 flex flex-wrap gap-2" aria-label="Visualization and tool skills">
+            <li class="px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 text-sm font-medium">Power BI (DAX, Power Query)</li>
+            <li class="px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 text-sm font-medium">Tableau</li>
+            <li class="px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 text-sm font-medium">Excel / VBA</li>
+            <li class="px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 text-sm font-medium">Google Sheets</li>
+            <li class="px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 text-sm font-medium">Git &amp; GitHub</li>
+            <li class="px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 text-sm font-medium">Jupyter Notebooks</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="projects" aria-label="Selected projects" class="border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/40">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-24">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Selected Projects</h2>
+        <p class="mt-3 text-indigo-600 dark:text-indigo-400 font-semibold text-sm uppercase tracking-widest">Recent work &amp; case studies</p>
+
+        <div class="mt-10 grid md:grid-cols-2 gap-6">
+
+          <!-- Project 1 -->
+          <article class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden flex flex-col">
+            <div aria-hidden="true" class="h-40 bg-gradient-to-br from-indigo-600 via-indigo-500 to-sky-500 flex items-center justify-center">
+              <svg class="w-14 h-14 text-white/90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Revenue Forecasting &amp; KPI Dashboard</h3>
+              <p class="mt-3 text-slate-600 dark:text-slate-400 leading-relaxed">
+                Interactive Power BI dashboard forecasting 12-month revenue with ~94% accuracy using a hybrid
+                Prophet + seasonal decomposition model, with drill-down KPIs for finance leadership.
+              </p>
+              <ul class="mt-4 flex flex-wrap gap-2" aria-label="Project 1 technologies">
+                <li class="px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-300 text-xs font-semibold">Power BI</li>
+                <li class="px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-300 text-xs font-semibold">Python</li>
+                <li class="px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-300 text-xs font-semibold">DAX</li>
+                <li class="px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-300 text-xs font-semibold">Forecasting</li>
+              </ul>
+              <div class="mt-5 pt-5 border-t border-slate-100 dark:border-slate-800 flex gap-4 text-sm font-semibold">
+                <a href="https://github.com/jawwad-khan-analyst" target="_blank" rel="noopener" class="text-indigo-600 dark:text-indigo-400 hover:underline">GitHub →</a>
+                <a href="#" class="text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden flex flex-col">
+            <div aria-hidden="true" class="h-40 bg-gradient-to-br from-sky-600 via-sky-500 to-indigo-500 flex items-center justify-center">
+              <svg class="w-14 h-14 text-white/90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Financial Statement Analysis Toolkit</h3>
+              <p class="mt-3 text-slate-600 dark:text-slate-400 leading-relaxed">
+                Excel/VBA toolkit that automates income statement, balance sheet and cash-flow analysis —
+                generating 30+ financial ratios and a one-page executive summary from raw trial balances.
+              </p>
+              <ul class="mt-4 flex flex-wrap gap-2" aria-label="Project 2 technologies">
+                <li class="px-2.5 py-1 rounded-full bg-sky-50 text-sky-700 dark:bg-sky-500/10 dark:text-sky-300 text-xs font-semibold">Excel</li>
+                <li class="px-2.5 py-1 rounded-full bg-sky-50 text-sky-700 dark:bg-sky-500/10 dark:text-sky-300 text-xs font-semibold">VBA</li>
+                <li class="px-2.5 py-1 rounded-full bg-sky-50 text-sky-700 dark:bg-sky-500/10 dark:text-sky-300 text-xs font-semibold">Financial Modeling</li>
+              </ul>
+              <div class="mt-5 pt-5 border-t border-slate-100 dark:border-slate-800 flex gap-4 text-sm font-semibold">
+                <a href="https://github.com/jawwad-khan-analyst" target="_blank" rel="noopener" class="text-indigo-600 dark:text-indigo-400 hover:underline">GitHub →</a>
+                <a href="#" class="text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden flex flex-col">
+            <div aria-hidden="true" class="h-40 bg-gradient-to-br from-indigo-500 via-sky-400 to-cyan-400 flex items-center justify-center">
+              <svg class="w-14 h-14 text-white/90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3v4.5m4.5-4.5v4.5M9 17.25h6M7.5 21h9a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0016.5 4.5h-9A2.25 2.25 0 005.25 6.75v12A2.25 2.25 0 007.5 21z"/></svg>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Customer Churn Prediction Model</h3>
+              <p class="mt-3 text-slate-600 dark:text-slate-400 leading-relaxed">
+                End-to-end ML pipeline (XGBoost) predicting subscription churn with 87% ROC-AUC, plus
+                SHAP-based driver analysis and retention playbooks for the commercial team.
+              </p>
+              <ul class="mt-4 flex flex-wrap gap-2" aria-label="Project 3 technologies">
+                <li class="px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-300 text-xs font-semibold">Python</li>
+                <li class="px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-300 text-xs font-semibold">scikit-learn</li>
+                <li class="px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-300 text-xs font-semibold">SQL</li>
+                <li class="px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-300 text-xs font-semibold">SHAP</li>
+              </ul>
+              <div class="mt-5 pt-5 border-t border-slate-100 dark:border-slate-800 flex gap-4 text-sm font-semibold">
+                <a href="https://github.com/jawwad-khan-analyst" target="_blank" rel="noopener" class="text-indigo-600 dark:text-indigo-400 hover:underline">GitHub →</a>
+                <a href="#" class="text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden flex flex-col">
+            <div aria-hidden="true" class="h-40 bg-gradient-to-br from-sky-500 via-indigo-500 to-violet-500 flex items-center justify-center">
+              <svg class="w-14 h-14 text-white/90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 5.625c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/></svg>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Budget vs. Actual Variance Reporting</h3>
+              <p class="mt-3 text-slate-600 dark:text-slate-400 leading-relaxed">
+                Automated SQL + Tableau pipeline consolidating department budgets and actuals into a
+                monthly variance pack — cutting reporting time by 20+ hours per close.
+              </p>
+              <ul class="mt-4 flex flex-wrap gap-2" aria-label="Project 4 technologies">
+                <li class="px-2.5 py-1 rounded-full bg-sky-50 text-sky-700 dark:bg-sky-500/10 dark:text-sky-300 text-xs font-semibold">SQL</li>
+                <li class="px-2.5 py-1 rounded-full bg-sky-50 text-sky-700 dark:bg-sky-500/10 dark:text-sky-300 text-xs font-semibold">Tableau</li>
+                <li class="px-2.5 py-1 rounded-full bg-sky-50 text-sky-700 dark:bg-sky-500/10 dark:text-sky-300 text-xs font-semibold">ETL</li>
+              </ul>
+              <div class="mt-5 pt-5 border-t border-slate-100 dark:border-slate-800 flex gap-4 text-sm font-semibold">
+                <a href="https://github.com/jawwad-khan-analyst" target="_blank" rel="noopener" class="text-indigo-600 dark:text-indigo-400 hover:underline">GitHub →</a>
+                <a href="#" class="text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section id="experience" aria-label="Work experience" class="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-24">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Experience</h2>
+      <p class="mt-3 text-indigo-600 dark:text-indigo-400 font-semibold text-sm uppercase tracking-widest">Where I've worked</p>
+
+      <ol class="mt-10 relative border-l-2 border-slate-200 dark:border-slate-800 space-y-10 ml-3">
+
+        <li class="pl-8 relative">
+          <span aria-hidden="true" class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-indigo-100 dark:ring-slate-900"></span>
+          <p class="text-sm font-semibold text-indigo-600 dark:text-indigo-400">
+            <time datetime="2022">2022</time> — Present
+          </p>
+          <h3 class="mt-1 text-xl font-bold text-slate-900 dark:text-white">Senior Financial Analyst</h3>
+          <p class="text-slate-500 dark:text-slate-400 font-medium">Nova Financial Group</p>
+          <p class="mt-2 text-slate-600 dark:text-slate-400 leading-relaxed">
+            Lead quarterly forecasting and 3-statement modeling for a $120M portfolio; built executive
+            dashboards adopted by the C-suite and improved forecast accuracy by 18%.
+          </p>
+        </li>
+
+        <li class="pl-8 relative">
+          <span aria-hidden="true" class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-indigo-100 dark:ring-slate-900"></span>
+          <p class="text-sm font-semibold text-indigo-600 dark:text-indigo-400">
+            <time datetime="2020">2020</time> — <time datetime="2022">2022</time>
+          </p>
+          <h3 class="mt-1 text-xl font-bold text-slate-900 dark:text-white">Data Analyst</h3>
+          <p class="text-slate-500 dark:text-slate-400 font-medium">Meridian Analytics</p>
+          <p class="mt-2 text-slate-600 dark:text-slate-400 leading-relaxed">
+            Built reporting pipelines in SQL and Python and shipped 25+ Power BI dashboards; automated
+            recurring reports and reduced manual effort by roughly 40%.
+          </p>
+        </li>
+
+        <li class="pl-8 relative">
+          <span aria-hidden="true" class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-indigo-100 dark:ring-slate-900"></span>
+          <p class="text-sm font-semibold text-indigo-600 dark:text-indigo-400">
+            <time datetime="2019">2019</time> — <time datetime="2020">2020</time>
+          </p>
+          <h3 class="mt-1 text-xl font-bold text-slate-900 dark:text-white">Financial Analyst (Junior)</h3>
+          <p class="text-slate-500 dark:text-slate-400 font-medium">Beacon Consulting</p>
+          <p class="mt-2 text-slate-600 dark:text-slate-400 leading-relaxed">
+            Supported budgeting, variance analysis and client financial reviews; developed Excel models
+            used across three client engagements.
+          </p>
+        </li>
+
+      </ol>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER / CONTACT ===================== -->
+  <footer id="contact" class="border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+      <div>
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Let's work together</h2>
+        <p class="mt-2 text-slate-600 dark:text-slate-400 max-w-md">
+          Have a dataset that needs a story, or a decision that needs numbers? I'm always open to
+          interesting projects and roles.
+        </p>
+        <ul class="mt-5 flex flex-wrap gap-4" aria-label="Contact links">
+          <li>
+            <a href="mailto:jawwadkhann69@gmail.com" class="inline-flex items-center gap-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-2.5 transition-colors">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+              jawwadkhann69@gmail.com
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/jawwad-khan-analyst" target="_blank" rel="me noopener" class="inline-flex items-center gap-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:border-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold px-5 py-2.5 transition-colors">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <a href="#home" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+        Back to top
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"/></svg>
+      </a>
+    </div>
+
+    <div class="border-t border-slate-200 dark:border-slate-800">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-500 dark:text-slate-400">
+        <p>© <span id="year">2026</span> Jawwad Khan. All rights reserved.</p>
+        <p class="flex items-center gap-1.5">
+          Built with HTML &amp; Tailwind CSS
+          <span aria-hidden="true">·</span>
+          <a href="https://github.com/jawwad-khan-analyst" target="_blank" rel="me noopener" class="hover:text-indigo-600 dark:hover:text-indigo-400">GitHub</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script>
+    // Dark mode toggle with persistence + system preference fallback
+    (function () {
+      var toggle = document.getElementById("theme-toggle");
+      var sun = document.getElementById("icon-sun");
+      var moon = document.getElementById("icon-moon");
+      var root = document.documentElement;
+
+      function apply(theme) {
+        if (theme === "dark") {
+          root.classList.add("dark");
+          if (toggle) toggle.setAttribute("aria-pressed", "true");
+          if (sun) sun.classList.remove("hidden");
+          if (moon) moon.classList.add("hidden");
+        } else {
+          root.classList.remove("dark");
+          if (toggle) toggle.setAttribute("aria-pressed", "false");
+          if (sun) sun.classList.add("hidden");
+          if (moon) moon.classList.remove("hidden");
+        }
+      }
+
+      if (toggle) {
+        toggle.addEventListener("click", function () {
+          var next = root.classList.contains("dark") ? "light" : "dark";
+          try { localStorage.setItem("theme", next); } catch (e) {}
+          apply(next);
+        });
+      }
+
+      // Sync icon state with whatever the head bootstrap decided
+      apply(root.classList.contains("dark") ? "dark" : "light");
+
+      // Auto-update copyright year
+      var year = document.getElementById("year");
+      if (year) year.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
