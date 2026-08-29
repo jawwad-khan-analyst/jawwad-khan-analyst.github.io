@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- sitemap.xml — Jawwad Khan portfolio
-     TODO: replace jawwadkhan.dev with your production domain,
-     and update <lastmod> whenever you publish changes. -->
+     Update <lastmod> whenever you publish changes. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jawwadkhan.dev/</loc>
+    <loc>https://jawwad-khan-analyst.github.io/</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>

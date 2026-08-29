@@ -31,17 +31,18 @@ A single-page portfolio built with **semantic HTML5** and the **Tailwind CSS CDN
 - **Mobile-friendly**: responsive layout, correct `viewport`, tap-highlight removed
 - **Theme-aware `theme-color`** meta for both light and dark mode
 
-## Before you deploy — replace these placeholders
+## Before you deploy — remaining placeholders
 
-1. **Domain**: search for `jawwadkhan.dev` in `index.html`, `robots.txt`, and `sitemap.xml`
-   and replace with your real domain (e.g. `https://yourname.com`).
-2. **`og-image.png`**: create a 1200×630 social preview image, upload it to your site root,
+Your domain (`https://jawwad-khan-analyst.github.io/`) is already configured everywhere —
+canonical, Open Graph, Twitter, JSON-LD, `robots.txt`, and `sitemap.xml`.
+
+1. **`og-image.png`**: create a 1200×630 social preview image and upload it to your site root,
    or remove the `og:image`/`twitter:image` tags.
-3. **Projects**: the four projects use realistic sample content. Swap descriptions,
+2. **Projects**: the four projects use realistic sample content. Swap descriptions,
    tags, and links for your real work; replace the `#` Live Demo links.
-4. **Experience**: replace sample companies/dates with your actual history (keep the
+3. **Experience**: replace sample companies/dates with your actual history (keep the
    `<time datetime>` attributes machine-readable).
-5. **Stats** in the hero: update to real numbers.
+4. **Stats** in the hero: update to real numbers.
 
 ## Google Search Console — getting indexed (latest workflow)
 
